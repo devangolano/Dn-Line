@@ -23,7 +23,7 @@
 
     <!-- Main Content -->
     <main
-      class="container mx-auto max-w-6xl px-4 flex flex-wrap sm:flex-nowrap items-center gap-8 sm:gap-12 mt-10 sm:mt-20"
+      class="container mx-auto max-w-6xl px-4 flex flex-wrap sm:flex-nowrap items-center gap-8 sm:gap-12 mt-10"
     >
       <!-- Left Column -->
       <div class="flex-1 text-center sm:text-left">
@@ -61,16 +61,16 @@
       <!-- Right Column - Hero Image -->
       <div class="flex-1 mt-8 md:mt-0 relative">
         <div
-          class="w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] rounded-full overflow-hidden relative mx-auto"
+          class="w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] shadow-2xl rounded-full overflow-hidden relative mx-auto"
         >
-          <img src="/home.gif" class="w-full h-full object-cover" />
+          <img src="/ticket.png" class="w-full h-full object-cover" />
         </div>
       </div>
     </main>
 
     <!-- Footer -->
     <footer
-      class="mt-16 text-gray-400 text-sm py-6 px-6 md:px-32 border-t border-gray-700"
+      class="mt-6 text-gray-400 text-sm py-6 px-6 md:px-32 border-t border-gray-400"
     >
       <div
         class="container mx-auto flex flex-col md:flex-row justify-between items-center"
