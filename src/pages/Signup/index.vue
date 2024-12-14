@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { Mail, LogIn, Chrome, Lock } from "lucide-vue-next";
+import { Mail, Chrome, Lock, User, Phone, UserPlus } from "lucide-vue-next";
 import { RouterLink } from "vue-router";
 
 const currentTime = ref("");
@@ -49,64 +49,91 @@ onMounted(() => {
     </nav>
 
     <main class="flex items-center px-6 mt-16 justify-center">
-      <div class="px-5 py-8 rounded-3xl shadow-2xl max-w-sm w-full">
+      <div class="px-5 rounded-3xl shadow-2xl max-w-sm w-full">
         <div
           class="rounded-full shadow-2xl bg-purple-900 p-2 w-16 h-16 justify-center flex items-center"
         >
-          <LogIn class="md:w-10 w-8 h-8 md:h-10 text-white" />
+          <UserPlus class="md:w-10 w-8 h-8 md:h-10 text-white" />
         </div>
-        <h2 class="text-center text-2xl font-semibold text-white">Bem-vindo</h2>
+        <h2 class="text-center text-2xl font-semibold text-white">
+          Criar conta
+        </h2>
         <p class="text-center text-sm text-gray-400 mb-6">
-          Entrar na sua conta.
+          Preencha com suas informações
         </p>
         <form class="">
           <!-- Campo de email ou telefone -->
-          <div class="mb-4">
+          <div class="">
             <div class="flex justify-between items-center">
+              <label
+                for="text"
+                class="flex items-center cursor-pointer gap-1 text-sm font-medium text-gray-400"
+              >
+                <User class="w-4" /> Nome Completo
+              </label>
+            </div>
+            <input
+              type="text"
+              id="name"
+              placeholder="Denise José"
+              class="mt-1 block w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none"
+            />
+
+            <div class="flex mt-3 justify-between items-center">
+              <label
+                for="tel"
+                class="flex items-center cursor-pointer gap-1 text-sm font-medium text-gray-400"
+              >
+                <Phone class="w-4" /> Telefone
+              </label>
+            </div>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="+244 948 324 028"
+              class="mt-1 block w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none"
+            />
+
+            <div class="flex mt-3 justify-between items-center">
               <label
                 for="email"
                 class="flex items-center cursor-pointer gap-1 text-sm font-medium text-gray-400"
               >
-                <Mail class="w-4" /> Email
+                <Mail class="w-4" /> E-mail
               </label>
             </div>
             <input
               type="email"
               id="email"
               placeholder="dnline@email.com"
-              class="mt-2 block w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none"
+              class="mt-1 block w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none"
             />
+
             <label
               for="email"
-              class="flex items-center mt-4 cursor-pointer gap-1 text-sm font-medium text-gray-400"
+              class="flex items-center mt-3 cursor-pointer gap-1 text-sm font-medium text-gray-400"
             >
-              <Lock class="w-4" /> EmailSenha</label
+              <Lock class="w-4" /> Senha</label
             >
             <input
               type="password"
               id="passWord"
               placeholder="sua senha!"
-              class="block mt-2 w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none"
+              class="block mt-1 w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none"
             />
           </div>
           <button
-            class="w-full py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+            class="w-full mt-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
           >
-            Entrar na sua conta
+            Criar sua conta
           </button>
           <RouterLink
-            to="/signup"
+            to="/login"
             class="text-blue-200 text-center pt-4 flex items-center justify-center font-mono font-semibold text-sm"
-            >Criar Conta</RouterLink
+            >Já tem conta</RouterLink
           >
         </form>
-        <div class="w-full border-t border-gray-400 mb-6"></div>
-        <button
-          class="w-full py-2 flex justify-center items-center bg-white border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100"
-        >
-          <Chrome class="w-5 h-5 mr-2" />
-          Entrar com o Google
-        </button>
+        <div class="w-full border-t border-gray-400 mb-5"></div>
       </div>
     </main>
   </div>
