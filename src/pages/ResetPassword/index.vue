@@ -133,7 +133,7 @@ onMounted(() => {
               type="button"
               @click="goToPreviousStep"
               v-if="step > 1"
-              class="py-2 px-4 bg-gray-600 text-white rounded-md hover:bg-gray-700"
+              class="py-2 px-4 bg-gray-400 text-white rounded-md hover:bg-gray-500"
             >
               Voltar
             </button>
