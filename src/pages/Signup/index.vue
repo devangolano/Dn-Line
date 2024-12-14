@@ -32,23 +32,11 @@ onMounted(() => {
         </RouterLink>
       </div>
       <div class="flex items-center gap-4 justify-center text-sm sm:text-base">
-        <span class="text-gray-400 md:flex text-sm hidden">{{
-          currentTime
-        }}</span>
-        <a
-          href="#"
-          class="text-gray-400 hover:text-white flex items-center gap-1"
-        >
-          Explorar
-          <ArrowUpRightIcon class="h-4 w-4" />
-        </a>
-        <RouterLink to="/login">
-          <a href="#" class="text-white hover:text-gray-200"> Entrar </a>
-        </RouterLink>
+        <span class="text-gray-400 text-sm">{{ currentTime }}</span>
       </div>
     </nav>
 
-    <main class="flex items-center px-6 mt-16 justify-center">
+    <main class="flex items-center mx-auto w-full h-screen px-6 justify-center">
       <div class="px-5 rounded-3xl shadow-2xl max-w-sm w-full">
         <div
           class="rounded-full shadow-2xl bg-purple-900 p-2 w-16 h-16 justify-center flex items-center"

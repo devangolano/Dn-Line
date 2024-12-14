@@ -48,7 +48,7 @@ onMounted(() => {
       </div>
     </nav>
 
-    <main class="flex items-center px-6 mt-16 justify-center">
+    <main class="flex items-center mx-auto w-full h-screen px-6 justify-center">
       <div class="px-5 py-8 rounded-3xl shadow-2xl max-w-sm w-full">
         <div
           class="rounded-full shadow-2xl bg-purple-900 p-2 w-16 h-16 justify-center flex items-center"
@@ -94,11 +94,18 @@ onMounted(() => {
           >
             Entrar na sua conta
           </button>
-          <RouterLink
-            to="/signup"
-            class="text-blue-200 text-center pt-4 flex items-center justify-center font-mono font-semibold text-sm"
-            >Criar Conta</RouterLink
-          >
+          <div class="pt-5 flex justify-between">
+            <RouterLink
+              to="/resetPassword"
+              class="text-blue-200 text-center flex items-center justify-center font-mono font-semibold text-sm"
+              >Esqueci a senha</RouterLink
+            >
+            <RouterLink
+              to="/signup"
+              class="text-blue-400 text-center flex items-center justify-center font-mono font-semibold text-sm"
+              >Criar conta</RouterLink
+            >
+          </div>
         </form>
         <div class="w-full border-t border-gray-400 mb-6"></div>
         <button
